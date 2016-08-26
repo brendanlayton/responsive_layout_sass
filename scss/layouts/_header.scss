@@ -1,0 +1,96 @@
+.main {
+	&-header {
+		@extend %centered;
+		@include fb(-webkit-flex, -ms-flex, flex, column);
+		padding-top: .5em;
+		padding-bottom: .5em;
+	
+		@include mq(medium) {
+			margin: 2em 0;
+		}
+		
+		@include mq(large) {
+			width: $width-1;
+			background-color: $white;
+			box-shadow: 0 1px 4px $color-shadow;
+			padding: 0;
+			margin: 0;
+		}
+	}
+	
+	&-container {
+		@include fb(-webkit-flex, -ms-flex, flex, column);
+			
+		@include mq(medium) {
+			margin: 0 auto;
+		}
+		
+		@include mq(large) {
+			@include fb(-webkit-flex, -ms-flex, flex, row, $align: center);
+			@include width(95%, 1150px);
+			padding: 10px 0;
+		}
+	}
+
+	&-nav {
+		display: none;
+		margin-top: 0px;
+		padding-top: 20px;
+		
+		@include mq(medium) {
+			@include fb(-webkit-flex, -ms-flex, flex, row);
+			padding-top: 0;
+			justify-content: center;
+			
+		}
+	}
+	
+	&-nav-mob {
+		cursor: pointer;
+		font-size: 20px;
+		
+		@include mq(medium) {
+			display: none;
+		}
+	}
+
+	&-nav li {
+		@include fb(-webkit-flex, -ms-flex, flex, column);
+		list-style-type: none;
+		background-color: $white;
+		margin: 5px 10px;
+		
+		@include mq(medium) {
+			background: transparent;
+		}
+	}
+
+	&-nav a {
+		@include text($font-small, $weight: 700, $color: $color-prim);
+		text-transform: uppercase;
+		padding: 10px 20px; // Makes the clickable area of the nav items and site name bigger 
+		
+		@include mq(medium) {
+			padding: 10px 20px;
+		}
+	}
+
+	& a:hover {
+		background: $color-prim;
+		color: $color-text-light;
+	}
+}
+
+a.active {
+	background: $color-prim;
+	color: $color-link-active; // may not need this style.
+}
+
+ .active:hover {
+	color: $color-text-light;
+}
+
+.fa .fa-bars {
+	cursor: pointer;
+}
+

@@ -1,0 +1,52 @@
+// Text
+
+@mixin text($size, $l-height: null, $weight: null, $color: null) {
+	font-size: $size;
+	line-height: $l-height;
+	font-weight: $weight;
+	color: $color;
+}
+
+// Flexbox
+
+@mixin fb($display-wk, $diplay-ms, $display, $direction, $wrap: null, $align: null, $justify: null) {
+	display: $display !important; // to overide jquery dislay: none;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+	align-items: $align;
+	justify-content: $justify;
+}
+
+
+
+// Width
+
+@mixin width($width, $max-width: null, $min-width: null) {
+	width: $width;
+	max-width: $max-width;
+	min-width: $min-width;
+}
+
+// Media Queries
+
+@mixin mq($break) {
+	@if $break == "small" {
+		@media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md - 1) {
+			@content;
+		}
+	}
+	@else if $break == "medium" {
+		@media (min-width: $brkpoint-md) {
+			@content;
+		}
+	}
+	@else if $break == "large" {
+		@media(min-width: $brkpoint-lg) {
+			@content;
+		}
+	}
+	@else {
+		@error "Whoops! No value could be retrieved for '#{$break}'."
+	}
+}
+

@@ -1,0 +1,87 @@
+.student-name {
+	@include text($font-large, $color: $color-prim);
+}
+
+.intro {
+	&-text {
+		@include mq(medium) {
+			flex: 1 $width-3-4;
+			order: -1;
+		}
+
+		@include mq(large) {
+			flex: 1.5;
+		} 
+	}
+
+	&-text p {
+		@include mq(medium) {
+			text-align: left;
+			font-size: $font-medium;
+			margin-top: 0;
+			padding: 0 12px;
+		}
+		@include mq(large) {
+			font-size: $font-large;
+		}
+	}
+}
+
+.portfolio h2 {
+	color: $color-sec;
+}
+
+.portfolio p {
+	color: $white;
+	
+	@include mq(medium) {
+		padding: 0px 38px;
+	}
+	
+	@include mq(large) {
+		padding: 0px 10px;
+	}
+}
+
+.contact {
+	&-dets {
+		line-height: 2.5;
+
+		@include mq(large) {
+			line-height: 2;
+		}
+	}
+
+	&-dets span {
+		font-weight: 600;
+		margin-left: 15px;
+	}
+
+	&-dets a {
+		color: $color-text-base;
+	}
+}
+
+.intro p,
+.contact p {
+	color: $color-text-base;
+	padding: 0 8px;
+}
+
+.contact p {
+	@include mq(medium) {
+		font-size: $font-medium;
+	}
+	
+	@include mq(large) {
+		font-size: $font-large;
+	}
+}
+
+.section-title {
+	@extend %title;
+	
+	@include mq(large) {
+		margin: 30px 0 50px;
+	}
+}

@@ -1,0 +1,30 @@
+
+// Center text
+
+%centered {
+	text-align: center;
+}
+
+// Gutter between columns
+
+%gutter {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+// Title text
+
+%title {
+	font-size: $font-medium;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 30px 0;
+	text-align: center;
+}
+
+// Desktop width
+
+%dt-width {
+  width: 95%;
+  max-width: 1150px;
+}

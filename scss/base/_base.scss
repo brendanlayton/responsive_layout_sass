@@ -1,0 +1,49 @@
+/* Base Styles -------------------- */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	@include text($font-medium, 1.6, normal, $color-text-base);
+	font-family: $stack-open-sans;
+	background-color: $alabaster;
+	background-image: url('#{$path-img}/light_wool.png');
+	margin: 0;
+}
+
+p {
+	@include text($font-small, $weight: 300);
+	margin-bottom: 2em;
+}
+
+
+h2 {
+	@include text($font-large, $weight: 400);
+	margin-bottom: 0;
+}
+
+h3 {
+	@include text($font-medium, $weight: 400);
+	margin-bottom: 0;
+}
+
+a {
+	&:link {
+		color: $color-link-default;
+		text-decoration: none;
+	}
+	&:visited {
+		color: $color-link-visited;
+	}
+	&:hover {
+		color: rgba($color-link-visited, .5);
+	}
+	&:active {
+		color: $color-link-active;
+	}
+}
+
+img {
+	max-width: $width-1;
+}

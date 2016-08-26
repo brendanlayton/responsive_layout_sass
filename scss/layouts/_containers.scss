@@ -1,0 +1,49 @@
+.intro {
+	@extend %centered;
+	@include fb(-webkit-flex, -ms-flex, flex, column);
+	margin-bottom: 40px;
+	
+	@include mq(medium) {
+		@include fb(-webkit-flex, -ms-flex, flex, row);
+		margin: 40px auto;
+	}
+	
+	@include mq(large) {
+		@include width(95%, 1150px);
+	}
+}
+
+.portfolio {
+	@extend %centered;
+	@include fb(-webkit-flex, -ms-flex, flex, column);
+	background-color: $color-prim;
+	padding: 50px 0;
+	
+	@include mq(medium) {
+		@include fb(-webkit-flex, -ms-flex, flex, row, wrap);
+		padding: 0 10px;
+	}
+	
+	@include mq(large) {
+		@include width(95%, 1150px);
+		margin: 10px auto;
+	}
+}
+
+.contact {
+	@extend %centered;
+	@include fb(-webkit-flex, -ms-flex, flex, column);
+  padding-left: 12px;
+  padding-right: 12px;
+  margin: 50px 0;
+	
+	@include mq(medium) {
+		width: $width-3-4;
+		margin: 30px auto;
+	}
+	
+	@include mq(large) {
+		@include width(65%, 1000px);
+		margin: 30px auto;
+	}
+}

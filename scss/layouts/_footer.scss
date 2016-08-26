@@ -1,0 +1,60 @@
+.footer {
+	&-container {
+		@include fb(-webkit-flex, -ms-flex, flex, row);
+		color: $color-prim;
+		padding: 1em 0;
+		border-top: 1px solid $color-border;
+		margin: 0 10px;
+		
+		@include mq(large) {
+			@include width(95%, 1150px);
+			margin: 10px auto;
+		}
+	}
+
+	&-name {
+		@include text($font-ex-small, $weight: 700);
+		margin-right: auto;
+		
+		@include mq(large) {
+			font-size: $font-small;
+		}
+	}
+
+	&-nav {
+		display: none;
+		
+			@include mq(medium) {
+				@include fb(-webkit-flex, -ms-flex, flex, row);
+				margin: 10px 10px 0;
+			}
+		}
+	&-nav li {
+		@include mq(medium) {
+			list-style-type: none;
+			margin-left: 30px;
+		}
+	}
+	
+	&-nav a {
+		@include mq(medium) {
+			@include text($font-ex-small, $weight: 700);
+			text-transform: uppercase;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		
+		@include mq(large) {
+			font-size: $font-small;
+		}
+	}
+}
+
+.top {
+	@include text($font-ex-small, $weight: 700);
+	text-transform: uppercase;
+	
+	@include mq(medium) {
+		display: none;
+	}
+}	
